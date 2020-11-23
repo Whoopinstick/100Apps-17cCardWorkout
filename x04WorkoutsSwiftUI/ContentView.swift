@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var cardImage = "AS"
     @State private var isShowingRulesSheet = false
     @State private var timer: Timer?
-        
+    
     var body: some View {
         VStack {
             Image(cardImage)
@@ -25,10 +25,10 @@ struct ContentView: View {
             Button("Stop!") {
                 stopTimer()
             }
-                .frame(width: 250, height: 50, alignment: .center)
-                .foregroundColor(.white)
-                .background(Color.red)
-                .cornerRadius(8.0)
+            .frame(width: 250, height: 50, alignment: .center)
+            .foregroundColor(.white)
+            .background(Color.red)
+            .cornerRadius(8.0)
             
             Spacer().frame(height: 20.0)
             
@@ -37,22 +37,24 @@ struct ContentView: View {
                     stopTimer()
                     startTimer()
                 }
-                    .frame(width: 115, height: 50, alignment: .center)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(8.0)
+                .frame(width: 115, height: 50, alignment: .center)
+                .foregroundColor(.white)
+                .background(Color.blue)
+                .cornerRadius(8.0)
                 
                 Spacer().frame(width: 20)
                 
                 Button("Rules") {
+                    stopTimer()
                     isShowingRulesSheet.toggle()
                 }
-                    .frame(width: 115, height: 50, alignment: .center)
-                    .foregroundColor(.white)
-                    .background(Color.green)
-                    .cornerRadius(8.0)
+                .frame(width: 115, height: 50, alignment: .center)
+                .foregroundColor(.white)
+                .background(Color.green)
+                .cornerRadius(8.0)
             }
         }
+        .onAppear(perform: startTimer)
         
         .sheet(isPresented: $isShowingRulesSheet, content: {
             RulesView()
@@ -61,7 +63,7 @@ struct ContentView: View {
     
     func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            self.cardImage = cards.randomElement() ?? "AS"
+            self.cardImage = cards.randomElement() ?? "KS"
         }
     }
     
