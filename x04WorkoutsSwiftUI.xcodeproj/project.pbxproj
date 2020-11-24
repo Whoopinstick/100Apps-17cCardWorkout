@@ -57,12 +57,11 @@
 			isa = PBXGroup;
 			children = (
 				0A23638C256C56DA001F57E0 /* x04WorkoutsSwiftUIApp.swift */,
-				0A23638E256C56DA001F57E0 /* ContentView.swift */,
-				0A47C20C256C777A00E9AA75 /* RulesView.swift */,
+				0A837140256D676600C28FD5 /* Model */,
+				0A83713E256D675C00C28FD5 /* View */,
 				0A236390256C56DA001F57E0 /* Assets.xcassets */,
 				0A236395256C56DA001F57E0 /* Info.plist */,
 				0A236392256C56DA001F57E0 /* Preview Content */,
-				0A47C212256C798C00E9AA75 /* Deck.swift */,
 			);
 			path = x04WorkoutsSwiftUI;
 			sourceTree = "<group>";
@@ -73,6 +72,23 @@
 				0A236393256C56DA001F57E0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0A83713E256D675C00C28FD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A23638E256C56DA001F57E0 /* ContentView.swift */,
+				0A47C20C256C777A00E9AA75 /* RulesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A837140256D676600C28FD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A47C212256C798C00E9AA75 /* Deck.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
